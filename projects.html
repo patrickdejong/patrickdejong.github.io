@@ -2,9 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects</title>
+    <title>Patrick Website</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <h1>Projects</h1>
+</header>
 <body>
-    Project Page
+<article>
+    <img class="logo" src="img/GeldZekerLogo.png" alt="GeldZekerLogo">
+
+    <!-- Slideshow container -->
+    <div id="slideshow" class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="img/GeldZekerHuiskamer.jpg" style="width:100%">
+            <div class="text">Huiskamer scene</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="img/GeldZekerHomescreen.jpg" style="width:100%">
+            <div class="text">Menuscherm GeldZeker</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="img/GeldZekerFruitafdeling.jpg" style="width:100%">
+            <div class="text">Karakter in fruitafdeling</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="img/GeldZekerSupermarkt.jpg" style="width:100%">
+            <div class="text">Op naar het pinnen!</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Project description -->
+    <div class="cijfer">
+        8
+    </div>
+    <div class="kopje">GeldZeker</div>
+    <p>
+    Nieuwe Nederlanders (statushouders) hebben veel moeite om ons financiële stelstel te begrijpen. Een bankrekening, contactloos betalen en maandsalaris zijn voorbeelden
+    van onze dagelijkse leven waar zij niks van af weten. GeldZeker is een educatieve mobiele game die statushouders op een leuke manier helpt om geldzaken te regelen.
+        Het spel bevat Tamagotchi, een verhaallijn en er zijn verschillende minigames te spelen.
+    </p>
+    <div class="kopje">Opdracht</div>
+
+    <p>
+        De start van dit project was gecompliceerd. Er was nog geen opdracht. Er was een probleem maar geen oplossing. We zijn begonnen met ons te verdiepen in de doelgroep.
+        Was is een statushouder? Welke hulp heeft hij nodig? Waarom loopt hij tegen problemen aan? Wat zijn de verschillen tussen onze culturen? Na een paar weken ontdekten we
+        dat een Mobile Game goed toegankelijk was voor de doelgroep. We hebben samen met HBO-Communicatie studenten onderzocht hoe we het beste ons financiële stelsel kunnen uitleggen.
+        Er ontstond langzaam een speelbaar verhaallijn. Het karakter in het spel kon vanuit zijn huis naar de supermarkt om boodschappen te doen. Op die locatie moet hij contactloos betalen leren.
+        De effectiviteit werd getest door een Social Worker. Met een testplan dat aangepast is naar de doelgroep kon zij zien of de spelers ook daadwerkelijk het concept begrepen.
+        Uiteindelijk is er een prachtige basis voor een mobiele game opgezet in een half jaar tijd. Het spel heet GeldZeker.
+    </p>
+    <div class="kopje">Bijdrage</div>
+    <p>
+        Tijdens dit project heb ik gefunctioneerd als Software Engineer. Het spel is ontwikkeld in Unity en geschreven in C#.
+        In dit semester ben ik ook teamleider geweest van het Development Team. Het was een multidiciplinair team van twee software developers en drie game artists.
+        Ik ben representatief geweest voor de groep en had de leiding in de communicatie. Samen met de opdrachtgever hebben wij veel aandacht besteed aan de kwaliteit van de samenwerking en het eindproduct.
+        Om de opdracht te voltooien zijn er nog andere deelnemende opleidingen geweest: Social Work, HBO-Communicatie en HBO-Rechten. <br>Minor: Game Studio (september 2020 - januari 2021)
+    </p>
+
+</article>
+
 </body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
 </html>
